@@ -21,36 +21,10 @@ de otro empleado hasta que se ingrese el valor positivo del sueldo.
     public static void main(String [] args){
         String leer;
         double sueldo, mayor=0, menor=10000;
-        int contador=0, i = 0;
-        
-    /*
-    do
-       {
-           leer = JOptionPane.showInputDialog("Ingrese el sueldo del Empleado" + aux++);
-               sueldo = Double.parseDouble(leer);
-           
-           for(int i=1;i<=5;i++)
-           {   
-               if(sueldo>300)
-               contador=contador +1;
-               
-              if(sueldo>mayor)
-               mayor=sueldo;
-              if(sueldo<menor)
-               menor=sueldo;
-              i=i+1;
-           }
-           JOptionPane.showMessageDialog(null," El sueldo Mayor es de $: " + mayor +
-            "\nEl sueldo Menor es de $: " + menor +
-            "\n" + contador + " Empleados tienen un sueldo mayor de $300");
-           
-           }
-    while (sueldo>=0);
-    JOptionPane.showMessageDialog(null,"No se permiten numeros negativos, intente de nuevo");
-    */
+        int contador=0, i = 1;
     
     while(i<=5){
-        leer = JOptionPane.showInputDialog("Ingrese el sueldo del Empleado" + i);
+        leer = JOptionPane.showInputDialog(" Ingrese el sueldo del Empleado " + i);
                sueldo = Double.parseDouble(leer);
                if(sueldo>=0){
                    if(sueldo>300)
@@ -69,14 +43,10 @@ de otro empleado hasta que se ingrese el valor positivo del sueldo.
 
                }
     }
+    i=i-1;
     JOptionPane.showMessageDialog(null," El sueldo Mayor es de $: " + mayor +
-            "\nEl sueldo Menor es de $: " + menor +
-            "\n" + contador + " Empleados tienen un sueldo mayor de $300");
-                      
-           
-               
-           
-    
+            "\n El sueldo Menor es de $: " + menor +
+            "\n" + contador + " Empleados tienen un sueldo mayor de $300 " + "\n Numero de empleados ingresados: " + i--);
     
     
     }
